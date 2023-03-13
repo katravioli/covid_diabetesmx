@@ -12,8 +12,15 @@ library(tidyr)
 library(survminer)
 
 ## Manejo de la base de datos####
-setwd("/Users/nefoantonio/UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO/OMAR YAXMEHEN BELLO CHAVOLLA - COVID-19, Diabetes and obesity")
-setwd("C:/Users/HP-PC/OneDrive - UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO/COVID-19, Diabetes and obesity")
+
+#bryan was here
+#install.packages('packrat') in case its needed
+packrat::init(infer.dependencies=FALSE)
+
+here::i_am("diabetes_covid.R")
+setwd(here())
+getwd()
+
 covid <- read_csv("200518COVID19MEXICO.csv")
 
 
